@@ -1,0 +1,26 @@
+[project]
+name = "python-sonarqube-jenkins"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "ffekirnew",email = "ffekirnew0808@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "fastapi[standard] (>=0.115.12,<0.116.0)",
+    "pytest (>=8.3.5,<9.0.0)",
+    "pytest-cov (>=6.1.1,<7.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.test.dependencies]
+pytest-cov = "^6.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+poetry-plugin-export = "^1.9.0"
+
