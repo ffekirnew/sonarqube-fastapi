@@ -17,7 +17,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                    cd sonarqube-fastapi
                     echo "Running tests..."
                     ./run_tests.sh
                 '''
@@ -27,7 +26,6 @@ pipeline {
         stage('SonarQube Analysis') { 
             steps {
                 sh '''
-                    cd sonarqube-fastapi
                     echo "Running sonarqube..."
                     ./run_sonarqube.sh
                 '''
